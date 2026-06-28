@@ -1,0 +1,60 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 22,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "linux-debug",
+      "displayName": "Linux Debug",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/linux-debug",
+      "environment": {
+        "CC": "",
+        "CXX": "",
+        "CFLAGS": "",
+        "CXXFLAGS": "",
+        "CPPFLAGS": "",
+        "LDFLAGS": "",
+        "CMAKE_ARGS": "",
+        "CMAKE_PREFIX_PATH": ""
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    },
+    {
+      "name": "linux-release",
+      "displayName": "Linux Release",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/linux-release",
+      "environment": {
+        "CC": "",
+        "CXX": "",
+        "CFLAGS": "",
+        "CXXFLAGS": "",
+        "CPPFLAGS": "",
+        "LDFLAGS": "",
+        "CMAKE_ARGS": "",
+        "CMAKE_PREFIX_PATH": ""
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "linux-debug",
+      "configurePreset": "linux-debug"
+    },
+    {
+      "name": "linux-release",
+      "configurePreset": "linux-release"
+    }
+  ]
+}
